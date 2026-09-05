@@ -29,4 +29,3 @@ Primary Endpoint: Change from baseline in HbA1c at Week 24
 ## Folder Structure
 
 ## References
-# https://github.com/wxzhai/Clinical-Trial-SAS-Programming-Portfolio
