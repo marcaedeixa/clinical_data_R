@@ -1,2 +1,29 @@
-# clinical_data_R
-Demonstration project of clinical data standardization and analysis using R.
+---
+title: "README"
+author: "Carolina Peçaibes"
+date: "2026-08-26"
+output: html_document
+---
+
+# Clinical Trial R Programming Portfolio
+
+## About Me
+
+Name: Carolina Peçaibes de Oliveira
+LinkedIn: linkedin.com/in/carolpecaibes/
+e-mail: carolpecaibes@gmail.com
+
+## Overview
+
+## Study Summary
+
+Design: Randomized, parallel-group
+Primary Endpoint: Change from baseline in HbA1c at Week 24
+
+## Project Workflow
+
+
+## Folder Structure
+
+## References
+# https://github.com/wxzhai/Clinical-Trial-SAS-Programming-Portfolio
