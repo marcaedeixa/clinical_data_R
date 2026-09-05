@@ -10,7 +10,9 @@ output: html_document
 ## About Me
 
 Name: Carolina Peçaibes de Oliveira
+
 LinkedIn: linkedin.com/in/carolpecaibes/
+
 e-mail: carolpecaibes@gmail.com
 
 ## Overview
@@ -18,6 +20,7 @@ e-mail: carolpecaibes@gmail.com
 ## Study Summary
 
 Design: Randomized, parallel-group
+
 Primary Endpoint: Change from baseline in HbA1c at Week 24
 
 ## Project Workflow
