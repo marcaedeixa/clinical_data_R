@@ -1,0 +1,5 @@
+"","oak_id","raw_source","patient_number","SUBJID","AETERM","AESEV","AESER","AESTDTC","AEENDTC","STUDYID","DOMAIN","USUBJID"
+"1",1,"raw_ae",101,"101","Headache","MILD","N","2022-02-01","2022-02-03","STUDY001","AE","STUDY001-101"
+"2",2,"raw_ae",101,"101","Nausea","MODERATE","N","2022-03-15","2022-03-18","STUDY001","AE","STUDY001-101"
+"3",3,"raw_ae",102,"102","Dizziness","SEVERE","Y","2022-04-10","2022-04-15","STUDY001","AE","STUDY001-102"
+"4",4,"raw_ae",103,"103","Fatigue","MILD","N","2022-02-20","2022-02-22","STUDY001","AE","STUDY001-103"

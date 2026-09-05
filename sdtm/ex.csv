@@ -1,0 +1,5 @@
+"oak_id","raw_source","patient_number","SUBJID","EXTRT","EXDOSE","EXDOSU","EXSTDTC","EXENDTC","STUDYID","DOMAIN","USUBJID"
+1,"raw_ex",101,"101","Treatment A",10,"mL","2022-01-11","2022-06-30","STUDY001","EX","STUDY001-101"
+2,"raw_ex",102,"102","Placebo",10,"mL","2022-01-13","2022-06-28","STUDY001","EX","STUDY001-102"
+3,"raw_ex",103,"103","Treatment A",10,"mL","2022-01-16","2022-06-29","STUDY001","EX","STUDY001-103"
+4,"raw_ex",104,"104","Placebo",10,"mL","2022-01-19","2022-06-27","STUDY001","EX","STUDY001-104"

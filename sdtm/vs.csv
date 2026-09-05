@@ -1,0 +1,5 @@
+"","oak_id","raw_source","patient_number","SUBJID","VSTESTCD","VISIT","VSTEST","VSORRES","VSORRESU","VSSTRESC","VSSTRESN","VSSTRESU","VSDTC","STUDYID","DOMAIN","USUBJID"
+"1",1,"raw_vs",101,"101","WEIGHT","Baseline","Weight",82,"kg","82",82,"kg","2022-01-10","STUDY001","VS","STUDY001-101"
+"2",2,"raw_vs",101,"101","WEIGHT","Week24","Weight",78,"kg","78",78,"kg","2022-06-28","STUDY001","VS","STUDY001-101"
+"3",3,"raw_vs",102,"102","WEIGHT","Baseline","Weight",75,"kg","75",75,"kg","2022-01-12","STUDY001","VS","STUDY001-102"
+"4",4,"raw_vs",102,"102","WEIGHT","Week24","Weight",74,"kg","74",74,"kg","2022-06-26","STUDY001","VS","STUDY001-102"
