@@ -44,3 +44,16 @@ adsl_cat = derive_vars_cat(
 )
 
 head(adsl_cat)
+
+# Apply Metadata to Create an eSub XPT and Perform Associated Checks
+
+adsl = adsl_cat |>
+  check_variables(metacore) |> # Check all variables specified are present and no more
+  check_ct_data(metacore, na_acceptable = TRUE) |> # Checks all variables with CT only contain values within the CT
+  order_cols(metacore) |> # Orders the columns according to the spec
+  sort_by_key(metacore) |> # Sorts the rows by the sort keys
+  xportr_type(metacore, domain = "ADSL") |> # Coerce variable type to match spec
+  xportr_length(metacore) |> # Assigns SAS length from a variable level metadata
+  xportr_label(metacore) |> # Assigns variable label from metacore specifications
+  xportr_df_label(metacore) |> # Assigns dataset label from metacore specifications
+  xportr_write(file.path(dir_adam, "adsl.xpt"), metadata = metacore, domain = "ADSL")

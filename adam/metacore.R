@@ -63,6 +63,10 @@ ds_vars =
     "ADSL", "SEX",       NA,       6,      TRUE,  "Required",  NA,
     # Age
     "ADSL", "AGE",       NA,       7,      TRUE,  "Required",  NA,
+    # Age Group 1
+    "ADSL", "AGEGR1",    NA,       8,      TRUE, "Permissible", NA,
+    # Age Group 1 (numeric)
+    "ADSL", "AGEGR1N",   NA,       9,      TRUE, "Permissible", NA,
     
     # Subject identifier
     "ADAE", "SUBJID",    NA,       1,      TRUE, "Permissible",  NA,
@@ -171,11 +175,13 @@ var_spec =
     ~variable, ~type, ~length, ~label,       ~format, ~common,
     "STUDYID", "text",     8,  "Study Identifier", NA, NA,     
     "USUBJID", "text",     12, "Unique Subject Identifier", NA, NA,
-    "RFSTDTC", "date",     8,  "Subject Reference Start Date/Time", NA, NA,	
-    "RFENDTC", "date",     8,  "Subject Reference End Date/Time", NA, NA,
+    "RFSTDTC", "date",     10,  "Subject Reference Start Date/Time", NA, NA,	
+    "RFENDTC", "date",     10,  "Subject Reference End Date/Time", NA, NA,
     "SUBJID",  "text",     3,  "Subject Identifier for the Study", NA, NA,
     "SEX",     "text",     1,  "Sex", NA, NA,
     "AGE",     "integer",  8,  "Age", NA, NA,
+    "AGEGR1",  "text",     20, "Age Group 1", NA, NA,
+    "AGEGR1N", "integer",   8, "Age Group 1 (N)", NA, NA,
     "AETERM",  "text",     20, "Reported Term for the Adverse Event", NA, NA,
     "AESER",   "text",     1,  "Seriousness of the Adverse Event", NA, NA,
     "AESEV",   "text",     20, "Severity of the Adverse Event", NA, NA,
@@ -224,7 +230,9 @@ value_spec =
     "ADSL", "SUBJID", "text", "PREDECESSOR",  NA_integer_, NA, NA, "PRED.ADSL.SUBJID",
     "ADSL", "SEX", "text", "PREDECESSOR",     NA_integer_, "CL.SEX", NA, "PRED.ADSL.SEX",
     "ADSL", "AGE", "integer", "PREDECESSOR",  0L, NA, NA, "PRED.ADSL.AGE",
-        
+    "ADSL", "AGEGR1",  "text",    "DERIVED", NA_integer_, "CL.AGEGR1", NA, "DER.ADSL.AGEGR1",
+    "ADSL", "AGEGR1N", "integer", "DERIVED", 0L,           NA, NA, "DER.ADSL.AGEGR1N",    
+    
     "ADAE", "SUBJID",   "text",    "PREDECESSOR", NA_integer_, NA, NA, NA,
     "ADAE", "AETERM",   "text",    "PREDECESSOR", NA_integer_, NA, NA, NA,
     "ADAE", "AESER",    "text",    "PREDECESSOR", NA_integer_, "CL.AESER", NA, NA,
@@ -289,6 +297,8 @@ derivations =
     "PRED.ADSL.SUBJID",  "DM.SUBJID",
     "PRED.ADSL.SEX",     "DM.SEX",
     "PRED.ADSL.AGE",     "DM.AGE",
+    "DER.ADSL.AGEGR1",   "Derive age group 1 (AGEGR1) from AGE.",
+    "DER.ADSL.AGEGR1N",  "Derive numeric age group 1 (AGEGR1N) from AGE.",
     
     "DER.ADLB.AVISIT",
     "Derive analysis visit (AVISIT) from the source visit (VISIT).",
@@ -337,6 +347,12 @@ codelist =
 
     "CL.SEX", "Sex", "CODE_DECODE",
     tibble(code = c("F", "M"), decode = c("Female", "Male")),
+    
+    "CL.AGEGR1", "Age Group 1", "CODE_DECODE",
+    tibble(
+      code = c("<60", "60+", "Missing"),
+      decode = c("Age < 60 years", "Age >= 60 years", "Missing")
+    ),
 
     "CL.AESER", "Adverse Event Seriousness", "CODE_DECODE",
     tibble(code = c("N", "Y"), decode = c("No", "Yes")),
